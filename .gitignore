@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Research/tool caches
+.firecrawl/
+.research/
+
+# Data: source licences do not permit us to assume redistribution rights
+data/raw/**
+data/interim/**
+data/processed/**
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/README.md
+
+# Generated artifacts and reports
+artifacts/**
+!artifacts/.gitkeep
+reports/figures/**
+reports/metrics/**
+reports/experiments/**
+reports/audits/**
+!reports/figures/.gitkeep
+!reports/metrics/.gitkeep
+!reports/experiments/.gitkeep
+!reports/audits/.gitkeep
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
