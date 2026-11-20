@@ -1,0 +1,16 @@
+feature,importance_mean,importance_std,analysis_set
+prior_artist_hits,0.07267679031584943,0.007237690203468894,post-selection temporal test sample; not used for model choice
+explicit,0.010271147940693559,0.009086919437441774,post-selection temporal test sample; not used for model choice
+loudness,0.008894550731897774,0.011442438173862788,post-selection temporal test sample; not used for model choice
+valence,0.006833548429940916,0.0033295770681984003,post-selection temporal test sample; not used for model choice
+danceability,0.006307633133081486,0.008192973618759623,post-selection temporal test sample; not used for model choice
+acousticness,0.004176086523344155,0.00751800230327784,post-selection temporal test sample; not used for model choice
+key,0.00288500653937383,0.004204398596726657,post-selection temporal test sample; not used for model choice
+energy,0.002722551922607408,0.007160416838593215,post-selection temporal test sample; not used for model choice
+liveness,0.0024040611037831868,0.001746147623530904,post-selection temporal test sample; not used for model choice
+mode,0.0005680973405083306,0.000573406779904001,post-selection temporal test sample; not used for model choice
+time_signature,-0.0015043293415755638,0.0008844571109017732,post-selection temporal test sample; not used for model choice
+duration_ms,-0.002287265737595345,0.01403030402899523,post-selection temporal test sample; not used for model choice
+tempo,-0.003013153987021949,0.005204528492923069,post-selection temporal test sample; not used for model choice
+instrumentalness,-0.006292215454712524,0.009318363292612679,post-selection temporal test sample; not used for model choice
+speechiness,-0.009319605282703688,0.011793305895419203,post-selection temporal test sample; not used for model choice

@@ -1,0 +1,2 @@
+# Runtime + reviewer demo environment. Install the package itself as editable.
+-e .[app]

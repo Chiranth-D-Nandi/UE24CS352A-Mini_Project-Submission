@@ -1,0 +1,74 @@
+project:
+  random_seed: 42
+  timezone: UTC
+
+data:
+  spotify_csv: data/raw/spotify/tracks_features.csv
+  billboard_archive_csv: data/raw/billboard/hot100_archive_1958_2021.csv
+  billboard_current_csv: data/raw/billboard/hot-100-current.csv
+  # Pinned repository snapshot for reproducible labels (UT Data commit 7037d25).
+  billboard_archive_url: https://raw.githubusercontent.com/utdata/rwd-billboard-data/7037d25289a6d705b631f1dbc1c313cf8d47de5a/data-out/hot100_archive_1958_2021.csv
+  billboard_current_url: https://raw.githubusercontent.com/utdata/rwd-billboard-data/7037d25289a6d705b631f1dbc1c313cf8d47de5a/data-out/hot-100-current.csv
+  billboard_hits: data/interim/billboard_hits.csv.gz
+  modeling_dataset: data/processed/modeling_dataset.csv.gz
+  match_audit: reports/audits/match_audit.csv.gz
+  unmatched_billboard: reports/audits/unmatched_billboard.csv.gz
+  manifest: reports/audits/data_manifest.json
+  min_release_year: 1990
+  max_release_year: 2020
+  # Year-level boundaries are deliberate because many release dates have only year precision.
+  train_end_year: 2014
+  selection_end_year: 2016
+  calibration_year: 2017
+  test_end_year: 2020
+  max_chart_before_release_years: 1
+  train_negatives_per_positive: 10
+  balanced_report_negatives_per_positive: 1
+
+features:
+  sets:
+    audio_only:
+      - explicit
+      - danceability
+      - energy
+      - key
+      - loudness
+      - mode
+      - speechiness
+      - acousticness
+      - instrumentalness
+      - liveness
+      - valence
+      - tempo
+      - duration_ms
+      - time_signature
+    audio_plus_artist_history:
+      - explicit
+      - danceability
+      - energy
+      - key
+      - loudness
+      - mode
+      - speechiness
+      - acousticness
+      - instrumentalness
+      - liveness
+      - valence
+      - tempo
+      - duration_ms
+      - time_signature
+      - prior_artist_hits
+
+training:
+  primary_metric: average_precision
+  threshold_metric: f1
+  selection_tolerance: 0.005
+  calibration_method: sigmoid
+  bootstrap_iterations: 100
+  permutation_repeats: 5
+  permutation_max_rows: 10000
+  profiles:
+    quick:
+      candidate_variants: quick
+    full:
+      candidate_variants: full
